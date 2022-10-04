@@ -1,0 +1,171 @@
+@import "~/src/assets/mixins/fontsMixins.scss";
+@import "~/src/assets/colors/colors.scss";
+
+.app {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 213px 0 0 47px;
+}
+
+.title {
+  @include HeaderTitle;
+  width: 753px;
+  height: 98px;
+  text-align: left;
+}
+
+.inputSection {
+  width: 427px;
+  height: 119px;
+  margin: 44px 26px 0 0;
+}
+
+
+.blockInputs {
+  display: flex;
+  align-items: center;
+}
+
+.inputTitle {
+  @include InputTitle;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.inputWrapper {
+  width: 427px;
+  height: 68px;
+  background: $gray;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.leftData {
+  & > input {
+    width: 159px;
+    background-color: $gray;
+    border: none;
+    outline: none;
+    height: 36px;
+    @include Header2;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+}
+
+.rightData {
+  @include NekstBlack;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: $gray2;
+  margin-right: 15px;
+}
+
+.rightDataTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include HeaderTitle;
+  font-size: 20px;
+  text-shadow: none;
+  color: $gray2;
+  width: 69px;
+  height: 54px;
+  margin-right: 10px;
+  background: $gray3;
+  border-radius: 16px;
+}
+
+.blockResults {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.leasingAmount {
+  @include HeaderTitle;
+  color: $gray2;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  text-shadow: none;
+  text-align: left;
+}
+
+.results {
+  width: 427px;
+  margin-right: 40px;
+}
+
+.request {
+  width: 416px;
+  height: 68px;
+  background: $orange;
+  border-radius: 40px;
+  @include Header2;
+  color: $white;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background: black;
+  }
+}
+
+@media (max-width: 1440px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    width: 100%;
+  }
+  .blockResults {
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+  .blockInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .results {
+    width: 320px;
+    margin-bottom: 40px;
+    margin-right: 1px;
+  }
+  .inputSection {
+    width: 95%;
+  }
+  .inputWrapper {
+    width: 100%;
+  }
+  .blockResults {
+    display: flex;
+  }
+}
+
+@media (max-width: 682px) {
+  .title {
+    margin-bottom: 20px;
+  }
+  .request {
+    width: 95%;
+  }
+}
+
+@media (max-width: 612px) {
+  .title {
+    margin-bottom: 85px;
+  }
+}
